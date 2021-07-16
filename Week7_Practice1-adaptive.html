@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week_Practical_task_1</title>
+    <style>
+        .header {
+            background-color: rgb(72, 99, 100);
+            text-align: center;
+            grid-area: header;
+        }
+
+        .main {
+            background-color: rgb(230, 238, 125);
+            grid-area: main;
+            text-align: center;
+        }
+
+        .h2 {
+            grid-area: h2;
+        }
+
+        .part1 {
+            grid-area: part1;
+        }
+
+        .part2 {
+            grid-area: part2;
+        }
+
+        .part3 {
+            grid-area: part3;
+        }
+
+        .part1,
+        .part2,
+        .part3 {
+            background-color: aquamarine;
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        .aside {
+            background-color: burlywood;
+            grid-area: aside;
+            text-align: center;
+        }
+
+
+
+        .foot1 {
+            grid-area: foot1;
+            background-color: skyblue;
+            padding: 10px;
+        }
+
+        .foot2 {
+            grid-area: foot2;
+            background-color: skyblue;
+            padding: 10px;
+        }
+
+        .foot3 {
+            grid-area: foot3;
+            background-color: skyblue;
+            padding: 10px;
+        }
+
+        .foot4 {
+            grid-area: foot4;
+            background-color: skyblue;
+            padding: 10px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .container_all {
+                height: 70vh;
+                display: grid;
+                grid-template-columns: 1fr 1fr 30%;
+                grid-template-rows: 20% 1fr 1fr 1fr;
+                grid-template-areas:
+                    "header header header"
+                    "main main aside"
+                    "main main aside"
+                    "main main aside";
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "h2 h2"
+                    "part1 part2"
+                    "part3 part3";
+            }
+
+            .footer {
+                background-color: darkcyan;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-template-areas:
+                    "foot1 foot2 foot3 foot4";
+                text-align: center;
+                padding: 10px;
+                gap: 10px;
+            }
+        }
+
+        @media screen and (max-width: 1023px) {
+            .container_all {
+                height: 70vh;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 20% 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                    "header header"
+                    "main aside"
+                    "main aside"
+                    "main aside"
+                    "main aside";
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                    "h2"
+                    "part1"
+                    "part2"
+                    "part3";
+            }
+
+            .footer {
+                background-color: darkcyan;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                    "foot1 foot2"
+                    "foot3 foot4";
+                text-align: center;
+                padding: 10px;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Week1</h1>
+    <h2>Adaptive design</h2>
+    <div class="container_all">
+        <header class="header">
+            <h2>Header</h2>
+        </header>
+        <main class="main">
+            <h2 class="h2">Main part</h2>
+            <div class="part1">1</div>
+            <div class="part2">2</div>
+            <div class="part3">3</div>
+        </main>
+        <aside class="aside">
+            <h2>Aside</h2>
+        </aside>
+
+    </div>
+    <footer class="footer">
+        <div class="foot1">Foot1</div>
+        <div class="foot2">Foot2</div>
+        <div class="foot3">Foot3</div>
+        <div class="foot4">Foot4</div>
+    </footer>
+</body>
